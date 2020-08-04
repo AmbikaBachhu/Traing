@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Training</title>
+</head>
+<body>
+<a href="{% url 'index' %}"><button style="background-color: red;padding: 10px">Back</button></a>
+<form action="{% url 'save_traine' %}" method="post">
+{% csrf_token %}
+    <h2 style="text-align: center;font-family: 'Times New Roman';color: cornflowerblue">Trainee Information</h2>
+    <table align="center">
+        <tr>
+            <th>
+    {{ traine}}
+            </th>
+        </tr>
+        <tr>
+            <th colspan="2">
+    <button type="submit">Submit</button>
+            </th>
+        </tr>
+</table>
+    {% for x in messages %}
+        <h3 style="text-align: center;color: crimson">{{ x }}</h3>
+    {% endfor %}
+</form>
+</body>
+</html>

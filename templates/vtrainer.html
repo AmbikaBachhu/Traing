@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Training</title>
+</head>
+<body>
+<h2 style="text-align: center;font-family: 'Times New Roman';color: cornflowerblue">Trainer</h2>
+<table align="center" border="2">
+<tr>
+<th>Name</th>
+    <th>Technology</th>
+<th>Consultant Phone</th>
+<th>Consultant Email</th>
+
+</tr>
+{% for x in data%}
+    <tr>
+<th>
+    {{ x.fname }}{{ x.lname }}
+</th>
+    <th>{{ x.technology }}</th>
+    <th>{{ x.phone }}</th>
+    <th>{{ x.email }}</th>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

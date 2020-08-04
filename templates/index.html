@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Training</title>
+</head>
+<body>
+<h2 style="text-align: center;font-family: 'Times New Roman';color: cornflowerblue">Project Dashboard</h2>
+<table align="center" border="2">
+    <tr>
+        <th><a href="{% url 'traine_dashboard' %}">Trainee Dashboard</a></th>
+        <th><a href="{% url 'lead' %}">Lead</a></th>
+        <th><a href="{% url 'prospect' %}">Prospect</a></th>
+        <th><a href="{% url 'intraining' %}">In Training</a></th>
+        <th><a href="{% url 'completed' %}">Complete</a></th>
+        <th><a href="{% url 'rejected' %}">Rejected</a></th>
+        <th><a href="{% url 'invalid' %}">In Valid</a></th>
+        <th><a href="{% url 'vtrainer' %}">Trainer</a></th>
+    </tr>
+    <tr>
+        <th colspan="4">
+            <a href="{% url 'traine' %}"><button type="button" style="background-color: cornflowerblue;color: white;padding: 10px">Add Trainee</button></a>
+        </th>
+        <th colspan="4">
+            <a href="{% url 'trainer' %}"><button type="button" style="background-color: cornflowerblue;color: white;padding: 10px">Add Trainer</button></a>
+        </th>
+    </tr>
+</table>
+</body>
+</html>

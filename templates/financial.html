@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Training</title>
+</head>
+<body>
+<form action="{% url 'save_financial' %}" method="post">
+{% csrf_token %}
+    <h2 style="text-align: center;font-family: 'Times New Roman';color: cornflowerblue">Financial Information</h2>
+    <table align="center">
+        <tr>
+            <th>
+                <label>Bill Rate</label>
+            </th>
+            <th>
+                <input type="number" required placeholder="0.00" name="bill">
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <label>Pay Rate</label>
+            </th>
+            <th>
+                <input type="number" required placeholder="0.00" name="pay">
+            </th>
+        </tr>
+        <tr>
+            <th colspan="2">
+    <button type="submit">Submit</button>
+            </th>
+        </tr>
+</table>
+    {% for x in messages %}
+        <h3 style="text-align: center;color: crimson">{{ x }}</h3>
+    {% endfor %}
+</form>
+</body>
+</html>
